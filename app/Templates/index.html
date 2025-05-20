@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="hero text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">
+        <span class="text-primary">BR</span><span class="text-dark">DEV</span>
+        <small class="d-block fs-4 mt-2 text-muted">BARBEARIA PREMIUM</small>
+      </h1>
+      <p class="lead mb-4">Agende seu corte com facilidade e praticidade. Escolha o horário, o barbeiro e pronto!</p>
+      <a href="#agendamento" class="btn btn-primary btn-lg px-4">Agendar agora <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <div class="container mt-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img
+          src="{{ url_for('static', filename='img/TESTE.jpg') }}"
+          alt="Barbearia e ambiente descontraído"
+          class="img-fluid"
+          width="500"
+        />
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-scissors"></i> Lugar para Grandes Homens</h2>
+        <p>
+          <strong>
+            Na Barbearia BRDEV oferecemos mais que cabelo, barba e bigode. Aqui você encontra e faz amigos enquanto relaxa e recebe um atendimento personalizado com profissionais altamente qualificados.
+          </strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br>
+
+  <section id="unidades">
+    <h2>Nossas Unidades</h2>
+    <div class="unidades-container">
+      <div class="card-unidade">
+        <div class="imagem-unidade">
+          <img src="{{ url_for('static', filename='img/FACHADA.jpg') }}" alt="Unidade Aracaju" />
+        </div>
+        <h3>Unidade Aracaju</h3>
+        <p>Rua Exemplo, 123 - Centro</p>
+        <p>(79) 99999-0000</p>
+      </div>
+
+      <div class="card-unidade">
+        <div class="imagem-unidade">
+          <img src="{{ url_for('static', filename='img/UNIDADE2.jpg') }}" alt="Unidade Salvador" />
+        </div>
+        <h3>Unidade Salvador</h3>
+        <p>Av. Modelo, 456 - Bairro</p>
+        <p>(71) 88888-0000</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="avaliacoes" id="avaliacoes">
+    <h2>O que dizem nossos clientes</h2>
+    <div class="cards">
+      <div class="card">
+        <p>"Atendimento top! Ambiente confortável!"</p>
+        <span>– João Pedro ★★★★★</span>
+      </div>
+      <div class="card">
+        <p>"Corte perfeito e barbeiro super atencioso!"</p>
+        <span>– Marcos Silva ★★★★★</span>
+      </div>
+    </div>
+  </section>
+{% endblock %}

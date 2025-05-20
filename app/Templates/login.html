@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Login - BRDEV{% endblock %}
+
+{% block content %}
+<hr>
+
+<div class="container">
+    <h1>Faça Login ou crie sua Conta para Agendar</h1>
+    <hr>
+    <div class="row">
+
+        <!-- Formulário de Login -->
+        <div class="col">
+            <form method="post" action="" class="border p-3">
+                <legend>Login</legend>
+                <fieldset>
+                    <div class="form-group">
+                        {{ Form_Login.Email.label(class="form-control-label") }}
+                        {{ Form_Login.Email(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ Form_Login.Senha.label(class="form-control-label") }}
+                        {{ Form_Login.Senha(class="form-control") }}
+                    </div>
+                    <div class="form-group mt-4">
+                        {{ Form_Login.botao_submit }}
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Formulário de Criação de Conta -->
+        <div class="col">
+            <form method="post" action="" class="border p-3">
+                <legend>CRIAR CONTA</legend>
+                <fieldset>
+                    <div class="form-group">
+                        {{ Form_CriarConta.Nome.label(class="form-control-label") }}
+                        {{ Form_CriarConta.Nome(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ Form_CriarConta.Email.label(class="form-control-label") }}
+                        {{ Form_CriarConta.Email(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ Form_CriarConta.Telefone.label(class="form-control-label") }}
+                        {{ Form_CriarConta.Telefone(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ Form_CriarConta.Senha.label(class="form-control-label") }}
+                        {{ Form_CriarConta.Senha(class="form-control") }}
+                    </div>
+                    <div class="form-group">
+                        {{ Form_CriarConta.Confirmacao.label(class="form-control-label") }}
+                        {{ Form_CriarConta.Confirmacao(class="form-control") }}
+                    </div>
+                    <div class="form-group mt-4">
+                        {{ Form_CriarConta.botao_submit_criarConta }}
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
